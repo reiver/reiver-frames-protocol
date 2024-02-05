@@ -19,6 +19,18 @@
 		The <strong>Frames Protocol</strong>, also known <strong>Farcaster Frames</strong>, is a simple web-based technology used for making applications.
 	</p>
 	<p>
+		It uses <abbr title="HyperText Markup Language">HTML</abbr> without really using <abbr title="HyperText Markup Language">HTML</abbr>, so that <strong>Frames Protocol</strong> applications work with clients that don't support the <strong>Frames Protocol</strong>.
+		The fall-back being <a href="https://ogp.me/">OpenGraph</a>.
+	</p>
+	<p>
+		Really, a <strong>Frames Protocol</strong> application is mostly made up of <strong>images</strong> and <strong>buttons</strong> on the client-side (that are specified using <abbr title="HyperText Markup Language">HTML</abbr> <code>&lt;meta&gt;</code> element) with a back-end that gets HTTP <code>POST</code>ed to, which can return a new "page" with an <strong>image</strong> and <strong>buttons</strong>, and so on and so on.
+	</p>
+	<p>
+		This choice of just being mostly <strong>images</strong> and <strong>buttons</strong>  actually makes the <strong>Frames Protocol</strong> simpler to create a viewer from scatch.
+		No need to implement all Web technologies.
+		No need to worry about security and privacy holes that Web technologies introduce.
+	</p>
+	<p>
 		Although the <strong>Frames Protocol</strong> <em>could</em> be used outside of <strong>Farcaster</strong>, at the time of writing, <strong>Farcaster</strong> clients (such as <strong>Warpcast</strong>) are the only major (client-side) platform to support it.
 	</p>
 	<p>
