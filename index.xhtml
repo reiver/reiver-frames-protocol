@@ -222,6 +222,130 @@ The following is &lt;b&gt;bold&lt;/b&gt; and &lt;a href="http://example.com/"&gt
 			<strong>So, what does that actually do‽</strong>
 		</p>
 	</section>
+
+	<section>
+		<h2>Buttons</h2>
+		<p>
+			We already went over three of the names the <strong>Frames Protocol</strong> uses with the <abbr title="HyperText Markup Language">HTML</abbr> <code>&lt;meta&gt;</code> element:
+		</p>
+		<ul>
+			<li><code>fc:frame</code></li>
+			<li><code>fc:frame:image</code></li>
+			<li><code>og:image</code></li>
+		</ul>
+		<p>
+			But there are other <strong>optional</strong> names, too.
+			We are going to look at 4 more of them:
+		</p>
+		<ul>
+			<li><code>fc:frame:button:1</code></li>
+			<li><code>fc:frame:button:2</code></li>
+			<li><code>fc:frame:button:3</code></li>
+			<li><code>fc:frame:button:4</code></li>
+		</ul>
+		<p>
+			These add buttons to a <strong>Frames Protocol</strong> application.
+		</p>
+		<section>
+			<h3>One Button</h3>
+			<p>
+				For example, this has <strong>one button</strong>:
+			</p>
+			<figure>
+<pre><code>
+	&lt;meta property="fc:frame"          content="vNext" /&gt;
+	&lt;meta property="fc:frame:image"    content="/images/4aigvXF62jMY8iRzFN8x.jpeg" /&gt;
+	&lt;meta property="og:image"          content="/images/4aigvXF62jMY8iRzFN8x.jpeg" /&gt;
+	&lt;meta property="fc:frame:button:1" content="the first button" /&gt;
+</code></pre>
+			</figure>
+			<p>
+				Note that this looks exactly the same as the previous example, except one more <abbr title="HyperText Markup Language">HTML</abbr> <code>&lt;meta&gt;</code> element has been added to it:
+			</p>
+			<figure>
+<pre><code>
+	&lt;meta property="fc:frame:button:1" content="the first button" /&gt;
+</code></pre>
+			</figure>
+		</section>
+		<section>
+			<h3>Two Buttons</h3>
+			<p>
+				Here is another example that has <strong>two buttons</strong>:
+			</p>
+			<figure>
+<pre><code>
+	&lt;meta property="fc:frame"          content="vNext" /&gt;
+	&lt;meta property="fc:frame:image"    content="/images/4aigvXF62jMY8iRzFN8x.jpeg" /&gt;
+	&lt;meta property="og:image"          content="/images/4aigvXF62jMY8iRzFN8x.jpeg" /&gt;
+	&lt;meta property="fc:frame:button:1" content="the first button" /&gt;
+	&lt;meta property="fc:frame:button:2" content="the second button" /&gt;
+</code></pre>
+			</figure>
+			<p>
+				Again, the focus is on the <code>fc:frame:button:*</code> <abbr title="HyperText Markup Language">HTML</abbr> <code>&lt;meta&gt;</code> elements:
+			</p>
+			<figure>
+<pre><code>
+	&lt;meta property="fc:frame:button:1" content="the first button" /&gt;
+	&lt;meta property="fc:frame:button:2" content="the second button" /&gt;
+</code></pre>
+			</figure>
+		</section>
+		<section>
+			<h3>Three Buttons</h3>
+			<p>
+				This example has <strong>three buttons</strong>:
+			</p>
+			<figure>
+<pre><code>
+	&lt;meta property="fc:frame"          content="vNext" /&gt;
+	&lt;meta property="fc:frame:image"    content="/images/4aigvXF62jMY8iRzFN8x.jpeg" /&gt;
+	&lt;meta property="og:image"          content="/images/4aigvXF62jMY8iRzFN8x.jpeg" /&gt;
+	&lt;meta property="fc:frame:button:1" content="the first button" /&gt;
+	&lt;meta property="fc:frame:button:2" content="the second button" /&gt;
+	&lt;meta property="fc:frame:button:3" content="the third button" /&gt;
+</code></pre>
+			</figure>
+			<p>
+				Focusing on the <code>fc:frame:button:*</code> <abbr title="HyperText Markup Language">HTML</abbr> <code>&lt;meta&gt;</code> elements:
+			</p>
+			<figure>
+<pre><code>
+	&lt;meta property="fc:frame:button:1" content="the first button" /&gt;
+	&lt;meta property="fc:frame:button:2" content="the second button" /&gt;
+	&lt;meta property="fc:frame:button:3" content="the third button" /&gt;
+</code></pre>
+			</figure>
+		</section>
+		<section>
+			<h3>Four Buttons</h3>
+			<p>
+				And finally, this example has <strong>four buttons</strong>:
+			</p>
+			<figure>
+<pre><code>
+	&lt;meta property="fc:frame"          content="vNext" /&gt;
+	&lt;meta property="fc:frame:image"    content="/images/4aigvXF62jMY8iRzFN8x.jpeg" /&gt;
+	&lt;meta property="og:image"          content="/images/4aigvXF62jMY8iRzFN8x.jpeg" /&gt;
+	&lt;meta property="fc:frame:button:1" content="the first button" /&gt;
+	&lt;meta property="fc:frame:button:2" content="the second button" /&gt;
+	&lt;meta property="fc:frame:button:3" content="the third button" /&gt;
+	&lt;meta property="fc:frame:button:4" content="the forth button" /&gt;
+</code></pre>
+			</figure>
+		</section>
+		<p>
+			At the time of writing the <strong>Frames Protocol</strong> does <em>not</em> support more than 4 buttons.
+		</p>
+	</section
+
+	<section>
+		<h2>Buttons Presses</h2>
+		<p>
+			So what happens when the user presses a button‽
+		</p>
+	</section
 </article>
 </main>
 
