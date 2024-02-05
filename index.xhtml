@@ -16,8 +16,135 @@
 		<a rel="author" class="u-url" href="http://changelog.ca/"><span class="p-given-name">Charles</span> <span class="p-additional-name">Iliya</span> <span class="p-family-name">Krempeaux</span></a>
 	</address>
 	<p>
-		The <strong>Frames Protocol</strong>, also called <strong>Farcaster Frames</strong>, is a simple web-based technology used for making applications.
+		The <strong>Frames Protocol</strong>, also known <strong>Farcaster Frames</strong>, is a simple web-based technology used for making applications.
 	</p>
+	<p>
+		Although the <strong>Frames Protocol</strong> <em>could</em> be used outside of <strong>Farcaster</strong>, at the time of writing, <strong>Farcaster</strong> clients are the only major (client-side) platform to support it.
+	</p>
+
+	<section>
+		<h2>Farcaster</h2>
+		<p>
+			Before we get into the <strong>Frames Protocol</strong> let's quickly go over <strong>Farcaster</strong> — since the <strong>Frames Protocol</strong> originated with <strong>Farcaster</strong>.
+		</p>
+		<p>
+			<strong>Farcaster</strong> is a decentralized social-media network — and is similar in many ways to other decentralized social-media networks, such as
+			the <strong>Fediverse</strong> (which includes Mastodon, Pleroma, Pixelfed, PeerTube, Misskey, Lemmy, Kbin, GreatApe, Akkoma, etc),
+			and
+			<strong>Bluesky</strong>.
+		</p>
+		<p>
+			And in particular, <strong>Farcaster</strong> is a <strong>micro-blogging</strong> social-media network platform.
+		</p>
+		<p>
+			The most famous <strong>micro-blogging</strong> social-media network platform is <strong>Twitter.</strong>.
+			But the <strong>Fediverse</strong>'s <strong>Mastodon</strong>, <strong>Akkoma</strong>, <strong>Misskey</strong>, <strong>Pleroma</strong> and others are also <strong>micro-blogging</strong> social-media network platforms.
+			And so too is <strong>Bluesky</strong>.
+		</p>
+		<p>
+			All of these (including <strong>Farcaster</strong>) are similar to <strong>Twitter.</strong>.
+		</p>
+	</section>
+
+	<section>
+		<h2>HTML</h2>
+		<p>
+			One of the main language of the <abbr title="World Wide Web">Web</abbr> is <abbr title="HyperText Markup Language">HTML</abbr>.
+		</p>
+		<p>
+			<abbr title="HyperText Markup Language">HTML</abbr> looks like this:
+		</p>
+<pre><code>
+The following is &lt;b&gt;bold&lt;/b&gt; and &lt;a href="http://example.com/"&gt;this&lt;/a&gt; is a link.
+</code></pre>
+		<p>
+			Although typically, <abbr title="HyperText Markup Language">HTML</abbr> comes as a whole page (rather than a fragment), and thus usually looks more like this:
+		<p>
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8" /&lt;
+        &lt;title&gt;An Example&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;p&gt;
+            The following is &lt;b&gt;bold&lt;/b&gt; and &lt;a href="http://example.com/"&gt;this&lt;/a&gt; is a link.
+        &lt;/p&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+		<p>
+			The <strong>Frames Protocol</strong> actually only uses a tiny part of HTML.
+		</p>
+	</section>
+
+	<section>
+		<h2>HTML &ltmeta&gt; Element</h2>
+		<p>
+			When creating a <strong>Frames Protocol</strong> application, you can effectively ignore almost all of <abbr title="HyperText Markup Language">HTML</abbr> except for one <abbr title="HyperText Markup Language">HTML</abbr> element — the <abbr title="HyperText Markup Language">HTML</abbr> &ltmeta&gt; element.
+		</p>
+		<p>
+			The <strong>Frames Protocol</strong> only uses the <abbr title="HyperText Markup Language">HTML</abbr> &ltmeta&gt; element.
+			And it (the <strong>Frames Protocol</strong>) uses the <abbr title="HyperText Markup Language">HTML</abbr> &ltmeta&gt; element in a very particular way.
+		</p>
+		<p>
+			The <abbr title="HyperText Markup Language">HTML</abbr> &ltmeta&gt; element has been around since the 1990s.
+		</p>
+		<p>
+			If you look at the old <abbr title="HyperText Markup Language">HTML</abbr 2.0 specification (i.e., <a href="https://datatracker.ietf.org/doc/html/rfc1866">IETC RFC-1866</a> in <a href="https://datatracker.ietf.org/doc/html/rfc1866#section-5.2.5">section 5.2.5.</a>), which was created back in the 1990s, you can see how the <abbr title="HyperText Markup Language">HTML</abbr> &ltmeta&gt; element was defined back then.
+		</p>
+	</section>
+
+	<section>
+		<h2>OpenGraph</h2>
+		<p>
+			The <strong>Frames Protocol</strong> usage of the <abbr title="HyperText Markup Language">HTML</abbr> &ltmeta&gt; element takes inspiration from the <a href="https://ogp.me/">OpenGraph</a> protocol.
+		</p>
+		<p>
+			Here is an example of the <a href="https://ogp.me/">OpenGraph</a> protocol:
+		</p>
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8" /&lt;
+
+
+	&lt;meta property="og:title" content="Hello world!" /&gt;
+	&lt;meta property="og:type"  content="article" /&gt;
+	&lt;meta property="og:image" content="/images/4aigvXF62jMY8iRzFN8x.jpeg" /&gt;
+	&lt;meta property="og:url"   content="http://www.example.com/article/hello-world.xhtml" /&gt;
+
+
+        &lt;title&gt;An Example&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;p&gt;
+            The following is &lt;b&gt;bold&lt;/b&gt; and &lt;a href="http://example.com/"&gt;this&lt;/a&gt; is a link.
+        &lt;/p&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+	<p>
+		Since there is a lot of <abbr title="HyperText Markup Language">HTML</abbr> code there, let's just focus on the <a href="https://ogp.me/">OpenGraph</a> part of it:
+	</p>
+<pre><code>
+	&lt;meta property="og:title" content="Hello world!" /&gt;
+	&lt;meta property="og:type"  content="article" /&gt;
+	&lt;meta property="og:image" content="/images/4aigvXF62jMY8iRzFN8x.jpeg" /&gt;
+	&lt;meta property="og:url"   content="http://www.example.com/article/hello-world.xhtml" /&gt;
+</code></pre>
+	<p>
+		It is rather simple.
+		It is just name-value pairs.
+	</p>
+	</section>
+
 </article>
 </main>
 
