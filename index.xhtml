@@ -19,10 +19,10 @@
 		The <strong>Frames Protocol</strong>, also known <strong>Farcaster Frames</strong>, is a simple web-based technology used for making applications.
 	</p>
 	<p>
-		Although the <strong>Frames Protocol</strong> <em>could</em> be used outside of <strong>Farcaster</strong>, at the time of writing, <strong>Farcaster</strong> clients are the only major (client-side) platform to support it.
+		Although the <strong>Frames Protocol</strong> <em>could</em> be used outside of <strong>Farcaster</strong>, at the time of writing, <strong>Farcaster</strong> clients (such as <strong>Warpcast</strong>) are the only major (client-side) platform to support it.
 	</p>
 	<p>
-		(The server-side of the <strong>Frames Protocol</strong>, which is called a <strong>Frame Server</strong>, is an HTTP resource — which some might loosely call an HTTP (or HTTP) URL.)
+		(The server-side of the <strong>Frames Protocol</strong>, which is called a <strong>Frame Server</strong>, is an just HTTP resource — which some might loosely call an HTTP (or HTTP) URL.)
 	</p>
 
 	<section>
@@ -57,12 +57,15 @@
 		<p>
 			<abbr title="HyperText Markup Language">HTML</abbr> looks like this:
 		</p>
+		<figure>
 <pre><code>
 The following is &lt;b&gt;bold&lt;/b&gt; and &lt;a href="http://example.com/"&gt;this&lt;/a&gt; is a link.
 </code></pre>
+		</figure>
 		<p>
 			Although typically, <abbr title="HyperText Markup Language">HTML</abbr> comes as a whole page (rather than a fragment), and thus usually looks more like this:
 		</p>
+		<figure>
 <pre><code>
 &lt;!DOCTYPE html&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en"&gt;
@@ -79,36 +82,38 @@ The following is &lt;b&gt;bold&lt;/b&gt; and &lt;a href="http://example.com/"&gt
     &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
+		</figure>
 		<p>
 			The <strong>Frames Protocol</strong> actually only uses a tiny part of HTML.
 		</p>
 	</section>
 
 	<section>
-		<h2>HTML &lt;meta&gt; Element</h2>
+		<h2>HTML <code>&lt;meta&gt;</code> Element</h2>
 		<p>
-			When creating a <strong>Frames Protocol</strong> application, you can effectively ignore almost all of <abbr title="HyperText Markup Language">HTML</abbr> except for one <abbr title="HyperText Markup Language">HTML</abbr> element — the <abbr title="HyperText Markup Language">HTML</abbr> &lt;meta&gt; element.
+			The <abbr title="HyperText Markup Language">HTML</abbr> <code>&lt;meta&gt;</code> element has been around since the 1990s.
 		</p>
 		<p>
-			The <strong>Frames Protocol</strong> only uses the <abbr title="HyperText Markup Language">HTML</abbr> &lt;meta&gt; element.
-			And it (the <strong>Frames Protocol</strong>) uses the <abbr title="HyperText Markup Language">HTML</abbr> &lt;meta&gt; element in a very particular way.
+			If you look at the old <abbr title="HyperText Markup Language">HTML</abbr> 2.0 specification (i.e., <a href="https://datatracker.ietf.org/doc/html/rfc1866">IETC RFC-1866</a> in <a href="https://datatracker.ietf.org/doc/html/rfc1866#section-5.2.5">section 5.2.5.</a>), which was created back in the 1990s, you can see how the <abbr title="HyperText Markup Language">HTML</abbr> <code>&lt;meta&gt;</code> element was defined back then.
 		</p>
 		<p>
-			The <abbr title="HyperText Markup Language">HTML</abbr> &lt;meta&gt; element has been around since the 1990s.
+			When creating a <strong>Frames Protocol</strong> application, you can effectively ignore almost all of <abbr title="HyperText Markup Language">HTML</abbr> except for one <abbr title="HyperText Markup Language">HTML</abbr> element — the <abbr title="HyperText Markup Language">HTML</abbr> <code>&lt;meta&gt;</code> element.
 		</p>
 		<p>
-			If you look at the old <abbr title="HyperText Markup Language">HTML</abbr> 2.0 specification (i.e., <a href="https://datatracker.ietf.org/doc/html/rfc1866">IETC RFC-1866</a> in <a href="https://datatracker.ietf.org/doc/html/rfc1866#section-5.2.5">section 5.2.5.</a>), which was created back in the 1990s, you can see how the <abbr title="HyperText Markup Language">HTML</abbr> &lt;meta&gt; element was defined back then.
+			The <strong>Frames Protocol</strong> only uses the <abbr title="HyperText Markup Language">HTML</abbr> <code>&lt;meta&gt;</code> element.
+			And it (the <strong>Frames Protocol</strong>) uses the <abbr title="HyperText Markup Language">HTML</abbr> <code>&lt;meta&gt;</code> element in a very particular way.
 		</p>
 	</section>
 
 	<section>
 		<h2>OpenGraph</h2>
 		<p>
-			The <strong>Frames Protocol</strong> usage of the <abbr title="HyperText Markup Language">HTML</abbr> &lt;meta&gt; element takes inspiration from the <a href="https://ogp.me/">OpenGraph</a> protocol.
+			The <strong>Frames Protocol</strong> usage of the <abbr title="HyperText Markup Language">HTML</abbr> <code>&lt;meta&gt;</code> element takes inspiration from the <a href="https://ogp.me/">OpenGraph</a> protocol.
 		</p>
 		<p>
-			Here is an example of the <a href="https://ogp.me/">OpenGraph</a> protocol:
+			Here is an example of a web-page using the <a href="https://ogp.me/">OpenGraph</a> protocol:
 		</p>
+		<figure>
 <pre><code>
 &lt;!DOCTYPE html&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en"&gt;
@@ -133,21 +138,87 @@ The following is &lt;b&gt;bold&lt;/b&gt; and &lt;a href="http://example.com/"&gt
     &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-	<p>
-		Since there is a lot of <abbr title="HyperText Markup Language">HTML</abbr> code there, let's just focus on the <a href="https://ogp.me/">OpenGraph</a> part of it:
-	</p>
+		</figure>
+		<p>
+			Since there is a lot of <abbr title="HyperText Markup Language">HTML</abbr> code there, let's just focus on the <a href="https://ogp.me/">OpenGraph</a> part of it:
+		</p>
+		<figure>
 <pre><code>
 	&lt;meta property="og:title" content="Hello world!" /&gt;
 	&lt;meta property="og:type"  content="article" /&gt;
 	&lt;meta property="og:image" content="/images/4aigvXF62jMY8iRzFN8x.jpeg" /&gt;
 	&lt;meta property="og:url"   content="http://www.example.com/article/hello-world.xhtml" /&gt;
 </code></pre>
-	<p>
-		It is rather simple.
-		It is just name-value pairs.
-	</p>
+		</figure>
+		<p>
+			It is rather simple.
+			It is just name-value pairs.
+		</p>
+		<p>
+			The "<code>og</code>" part (in "<code>og:title</code>", "<code>og:type</code>", "<code>og:image</code>", and "<code>og:url</code>") is short for "OpenGraph".
+			And thus all these  <a href="https://ogp.me/">OpenGraph</a> names are namespaced.
+		</p>
 	</section>
 
+	<section>
+		<h2>Frames <code>&lt;meta&gt;</code></h2>
+		<p>
+			The <strong>Frames Protocol</strong> defines its own list of name-value pairs also using the <abbr title="HyperText Markup Language">HTML</abbr> <code>&lt;meta&gt;</code> element, similar to <a href="https://ogp.me/">OpenGraph</a>.
+		</p>
+		<p>
+			When creating a <strong>Frames Protocol</strong> application, you <strong>MUST</strong> include these:
+		</p>
+		<ul>
+			<li><code>fc:frame</code></li>
+			<li><code>fc:frame:image</code></li>
+			<li><code>og:image</code></li>
+		</ul>
+		<p>
+			(Note that the last required name is from <a href="https://ogp.me/">OpenGraph</a>!
+			Where the first two have been created by the <strong>Frames Protocol</strong>.)
+		</p>
+		<p>
+			Here is an example of these in <abbr title="HyperText Markup Language">HTML</abbr> <code>&lt;meta&gt;</code> elements:
+		</p>
+		<figure>
+<pre><code>
+	&lt;meta property="fc:frame"       content="vNext" /&gt;
+	&lt;meta property="fc:frame:image" content="/images/4aigvXF62jMY8iRzFN8x.jpeg" /&gt;
+	&lt;meta property="og:image"       content="/images/4aigvXF62jMY8iRzFN8x.jpeg" /&gt;
+</code></pre>
+		</figure>
+		<p>
+			Or the same in a more fjll <abbr title="HyperText Markup Language">HTML</abbr> document:
+		</p>
+		<figure>
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8" /&lt;
+
+
+	&lt;meta property="fc:frame"       content="vNext" /&gt;
+	&lt;meta property="fc:frame:image" content="/images/4aigvXF62jMY8iRzFN8x.jpeg" /&gt;
+	&lt;meta property="og:image"       content="/images/4aigvXF62jMY8iRzFN8x.jpeg" /&gt;
+
+
+        &lt;title&gt;Example Frame Server&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;p&gt;
+		This is an example Frame Server.
+        &lt;/p&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+		</figure>
+		<p>
+			<strong>So what does that actually do‽</strong>
+		</p>
+	</section>
 </article>
 </main>
 
